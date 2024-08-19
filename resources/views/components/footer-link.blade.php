@@ -1,0 +1,1 @@
+<a href="{{$link ?? '#'}}" class="link-secondary text-decoration-none tajawal-medium p-1 d-block">{{$linkLabel}}</a>
