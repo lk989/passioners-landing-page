@@ -19,9 +19,8 @@
         <link href="{{ asset('css/bootstrap_5.0.2.rtl.min.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div class="m-lg-5 m-2">
+        <div class="mx-lg-5 mx-2">
             {{ $slot }}
-
             @include('partials/footer')
         </div>
     </body>

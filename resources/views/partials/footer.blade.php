@@ -6,7 +6,7 @@
         </div>
         <div class="col-lg-6">
             <div class="d-flex align-items-center">
-                <div class="bg-white shadow-sm">
+                <div class="bg-white shadow-sm flex-grow-1">
                     <div class="p-lg-5 p-3">
                         <h2 class="tajawal-extrabold text-dark">تطبيق باشنورز</h2>
                         <p class="tajawal-regular text-gray">أصبح التواصل الآن أسهل مع تطبيق باشنورز!</p>
@@ -16,10 +16,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-none d-lg-flex align-items-center ms-lg-n5">
+                <div class="d-none d-lg-flex align-items-center">
                     <img src="{{asset('img/phone.png')}}" height="220" alt="" style="object-fit: contain;">
                 </div>
             </div>
+            <div class="row my-3">
+                <x-partners-logo imgPath="logos/human-resources.png"/>
+                <x-partners-logo imgPath="logos/bank.png"/>
+                <x-partners-logo imgPath="logos/google.png"/>
+                <x-partners-logo imgPath="logos/microsoft.png"/>
+            </div>
+        </div>
+        <div>
+            <p class="tajawal-regular text-center">&copy; جميع الحقوق محفوظة <strong>شركة الشغف والثراء لخدمات الأعمال</strong></p>
         </div>
     </div>
 </footer>
