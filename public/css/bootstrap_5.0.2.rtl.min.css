@@ -26,6 +26,7 @@
     --bs-danger: #dc3545;
     --bs-light: #f8f9fa;
     --bs-dark: #212529;
+    --bs-light-blue: #e3f1ff;
     --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
         "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
@@ -44,43 +45,43 @@
 /* ? Tajawal */
 .tajawal-extralight {
     font-family: "Tajawal", sans-serif;
-    font-weight: 200;
+    font-weight: 200 !important;
     font-style: normal;
   }
   
   .tajawal-light {
     font-family: "Tajawal", sans-serif;
-    font-weight: 300;
+    font-weight: 300 !important;
     font-style: normal;
   }
   
   .tajawal-regular {
     font-family: "Tajawal", sans-serif;
-    font-weight: 400;
+    font-weight: 400 !important;
     font-style: normal;
   }
   
   .tajawal-medium {
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 500 !important;
     font-style: normal;
   }
   
   .tajawal-bold {
     font-family: "Tajawal", sans-serif;
-    font-weight: 700;
+    font-weight: 700 !important;
     font-style: normal;
   }
   
   .tajawal-extrabold {
     font-family: "Tajawal", sans-serif;
-    font-weight: 800;
+    font-weight: 800 !important;
     font-style: normal;
   }
   
   .tajawal-black {
     font-family: "Tajawal", sans-serif;
-    font-weight: 900;
+    font-weight: 900 !important;
     font-style: normal;
   }
 
@@ -679,7 +680,7 @@ progress {
     }
 }
 .row {
-    --bs-gutter-x: 1.5rem;
+    --bs-gutter-x: 0;
     --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
@@ -9568,5 +9569,40 @@ fieldset:disabled .btn {
     .d-print-none {
         display: none !important;
     }
+}
+
+.btn-tab{
+    color: var(--bs-dark);
+}
+.btn-tab:hover{
+    background-color: var(--bs-light-blue);
+    color: var(--bs-primary) !important;
+}
+.bg-light-blue{
+    background-color: var(--bs-light-blue);
+}
+.cursor-pointer{
+    cursor: pointer !important;
+}
+.border-dashed {
+    border-style: dashed;
+}
+.border-light-blue{
+    border-color: var(--bs-light-blue);
+}
+.resize-none{
+    resize: none !important;
+}
+.progress-container {
+    margin-top: 20px;
+}
+.progress-bar {
+    background-color: var(--bs-primary);
+    height: 20px;
+    width: 0%;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 10px;
 }
 /*# sourceMappingURL=bootstrap.rtl.min.css.map */
