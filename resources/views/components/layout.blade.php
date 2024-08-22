@@ -20,6 +20,7 @@
     </head>
     <body>
         <div class="mx-lg-5 mx-2">
+            @include('partials/header')
             {{ $slot }}
             @include('partials/footer')
         </div>

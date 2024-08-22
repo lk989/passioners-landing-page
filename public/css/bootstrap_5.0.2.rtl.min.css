@@ -9605,4 +9605,21 @@ fieldset:disabled .btn {
     line-height: 20px;
     margin-bottom: 10px;
 }
+.notification-circle{
+    width: 14px;
+    height: 14px;
+    top: -10px;
+    right: -10px;
+    opacity: 0.6;
+}
+.collapse.show {
+    position: absolute;
+    width: 100% !important;
+    background-color: var(--bs-white);
+    top: 60px;
+    left: 0;
+    height: calc(100vh - 60px);
+    z-index: 10;
+    overflow-y: auto;
+}
 /*# sourceMappingURL=bootstrap.rtl.min.css.map */
