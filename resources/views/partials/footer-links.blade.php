@@ -4,8 +4,8 @@
 @endphp
 
 <div class="row border-top border-bottom border-light py-3">
-    <x-footer-links-column :links="$firstColumnLinks"/>
-    <x-footer-links-column :links="$secondColumnLinks"/>
+    <x-footer-links-column col="col-5" :links="$firstColumnLinks"/>
+    <x-footer-links-column col="col-7" :links="$secondColumnLinks"/>
 </div>
 <div class="d-flex gap-2 py-4">
     <img src="{{ asset('img/maroof.jpg') }}" height="36rem" alt="">

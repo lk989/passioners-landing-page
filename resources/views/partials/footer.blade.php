@@ -1,6 +1,6 @@
 <footer>
     <img src="{{ asset('img/logo.svg') }}" width="200rem" class="m-4" alt="logo">
-    <div class="row">
+    <div class="row mb-4 mb-lg-1">
         <div class="col-lg-6">
             @include('partials/footer-links')
         </div>
@@ -27,7 +27,7 @@
                 <x-partners-logo imgPath="logos/microsoft.png"/>
             </div>
         </div>
-        <div>
+        <div class="d-none d-lg-block">
             <p class="tajawal-regular text-center">&copy; جميع الحقوق محفوظة <strong>شركة الشغف والثراء لخدمات الأعمال</strong></p>
         </div>
     </div>
