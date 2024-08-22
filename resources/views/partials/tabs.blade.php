@@ -18,24 +18,19 @@
                     </div>
                 </x-slot>
             </x-packages-content>
-            @livewire('file-upload')
             <x-packages-content>
                 <x-slot name="mainContent">
-                    <x-input-group :required="true">
-                        <x-slot name="label">
-                            يجب عليك إضافة مجموعة صور أو صورة واحدة على الأقل إلى مشروعك
-                        </x-slot>
-                        <x-slot name="input">
-                            <x-file-input id="project-images" :required="true"/>
-                        </x-slot>
-                        <x-slot name="details">
-                            <ul>
+                    @livewire('file-upload', [
+                        'label' => 'يجب عليك إضافة مجموعة صور أو صورة واحدة على الأقل إلى مشروعك',
+                        'id' => 'project-images',
+                        'details' => @verbatim
+                            '<ul>
                                 <li><p>الصور <small>(.png .gif .jpg يصل حجمها إلى 10 ميغابايت، ولا يزيد حجمها عن 4000 بكسل في أي بُعد)</small></p></li>
                                 <li><p>أبعاد الصورة (300 * 300)</p></li>
                                 <li><p>الحد الأقصى لمجموع الصور 20 صورة</p></li>
-                            </ul>
-                        </x-slot>
-                    </x-input-group>
+                            </ul>'
+                        @endverbatim
+                    ])
                 </x-slot>
                 <x-slot name="descriptionTitle">نموذج الصور</x-slot>
                 <x-slot name="description">يساعدك في تعزيز احترافيتك للعملاء كل ما كان المشروع مليئًا بالصور كل ما وثق العميل في التعامل معك</x-slot>
@@ -43,14 +38,10 @@
 
             <x-packages-content>
                 <x-slot name="mainContent">
-                    <x-input-group :required="true">
-                        <x-slot name="label">
-                            يجب عليك إضافة صورة لغلاف مشروعك
-                        </x-slot>
-                        <x-slot name="input">
-                            <x-file-input id="project-poster" :required="true"/>
-                        </x-slot>
-                    </x-input-group>
+                    @livewire('file-upload', [
+                        'label' => 'يجب عليك إضافة صورة لغلاف مشروعك',
+                        'id' => 'project-poster',
+                    ])
                 </x-slot>
                 <x-slot name="descriptionTitle">غلاف العمل</x-slot>
                 <x-slot name="description">يساعدك في إبراز احترافيتك وجذب العملاء من خلال غلاف جذاب</x-slot>

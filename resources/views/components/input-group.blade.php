@@ -13,4 +13,7 @@
             {{$details}}
         </div>
     @endisset
+    @isset($files)
+        {{$files}}
+    @endisset
 </div>

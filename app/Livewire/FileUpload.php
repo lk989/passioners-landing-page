@@ -4,40 +4,57 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Livewire\Attributes\On;
 
 class FileUpload extends Component
 {
     use WithFileUploads;
 
+    public $label;
+    public $id;
+    public $details;
     public $files = [];
     public $progress = [];
 
+    public function mount($label, $id, $details = null)
+    {
+        $this->label = $label;
+        $this->id = $id;
+        $this->details = $details;
+    }
+    
     public function updatedFiles()
     {
         foreach ($this->files as $file) {
-            $fileName = $file->getClientOriginalName();
-            $this->progress[$fileName] = 0;
-
-            $this->dispatch('file-upload-start', ['fileName' => $fileName]);
-
-            // Simulate file processing
-            $this->simulateFileProcessing($file, $fileName);
+            $this->progress[$file->getClientOriginalName()] = 0;
+            $this->dispatch('simulate-upload', $file->getClientOriginalName());
         }
     }
 
-    private function simulateFileProcessing($file, $fileName)
+    #[On('simulate-upload')]
+    public function simulateFileUpload($fileName)
     {
-        $file->storeAs('uploads', $fileName);
+        $this->dispatch('file-upload-start', ['fileName' => $fileName]);
 
-        for ($i = 0; $i <= 100; $i++) {
-            // sleep(1); // Simulate time passing
-            $this->dispatch('file-upload-progress', ['fileName' => $fileName, 'progress' => $i]);
+        $progress = 0;
+        while ($progress <= 100) {
+            $this->progress[$fileName] = $progress;
+            $this->dispatch('file-upload-progress', ['fileName' => $fileName, 'progress' => $progress]);
+            $progress += 1;
+            $this->dispatch('sleep'); 
         }
 
-        // Finalize upload
         $this->dispatch('file-upload-complete', ['fileName' => $fileName]);
     }
-    
+
+    public function removeFile($fileName)
+    {
+        $this->files = array_filter($this->files, function ($file) use ($fileName) {
+            return $file->getClientOriginalName() !== $fileName;
+        });
+        unset($this->progress[$fileName]);
+    }
+
     public function render()
     {
         return view('livewire.file-upload');
