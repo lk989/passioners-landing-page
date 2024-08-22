@@ -104,21 +104,3 @@
         </form>
     </div>
 </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const steps = document.querySelectorAll('.circle');
-
-    // Example: Setting the second step as the active step
-    steps[1].classList.add('active');
-
-    // Add this to your CSS:
-    /*
-    .circle.active {
-        background-color: #1d7ab6;
-        color: #fff;
-    }
-    */
-});
-
-</script>
