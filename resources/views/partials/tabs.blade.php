@@ -9,6 +9,15 @@
 
     <div class="border border-secondary rounded-3">
         <form action="" enctype="multipart/form-data">
+            <x-packages-content>
+                <x-slot name="mainContent">
+                    <div class="progress-container mx-lg-5">
+                        <x-progress-step stepName="عنوان العمل" status="completed"/>
+                        <x-progress-step stepName="تفاصيل العمل" status="active"/>
+                        <x-progress-step stepName="مراجعة العمل"/>
+                    </div>
+                </x-slot>
+            </x-packages-content>
             @livewire('file-upload')
             <x-packages-content>
                 <x-slot name="mainContent">
@@ -95,3 +104,21 @@
         </form>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const steps = document.querySelectorAll('.circle');
+
+    // Example: Setting the second step as the active step
+    steps[1].classList.add('active');
+
+    // Add this to your CSS:
+    /*
+    .circle.active {
+        background-color: #1d7ab6;
+        color: #fff;
+    }
+    */
+});
+
+</script>
