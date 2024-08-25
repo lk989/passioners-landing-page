@@ -9574,6 +9574,10 @@ fieldset:disabled .btn {
 .btn-tab{
     color: var(--bs-dark);
 }
+.btn-tab.active{
+    color: var(--bs-primary) !important;
+    background-color: var(--bs-light-blue);
+}
 .btn-tab:hover{
     background-color: var(--bs-light-blue);
     color: var(--bs-primary) !important;

@@ -16,7 +16,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <button type="button" class="btn-close" aria-label="Close" wire:click="removeFile('{{ $file->getClientOriginalName() }}')"></button>
-                                <img src="{{ $file->temporaryUrl() }}" alt="{{ $file->getClientOriginalName() }}" class="img-fluid p-3">
+                                <img src="{{ $file->temporaryUrl() }}" alt="{{ $file->getClientOriginalName() }}" class="img-fluid px-3 py-0">
                                 <p class="mt-2">{{ $file->getClientOriginalName() }}</p>
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" style="width: {{ $progress[$file->getClientOriginalName()] ?? 0 }}%;" aria-valuenow="{{ $progress[$file->getClientOriginalName()] ?? 0 }}" aria-valuemin="0" aria-valuemax="100">
